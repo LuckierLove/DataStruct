@@ -7,4 +7,8 @@ add_executable(DataStruct main.cpp
         SequenceList/SequenceListStatic.h
         SequenceList/SequenceListStatic.cpp
         SequenceList/SequenceListDynamic.h
-        SequenceList/SequenceListDynamic.cpp)
+        SequenceList/SequenceListDynamic.cpp
+        LinkList/SLinkListH.cpp
+        LinkList/SLinkListH.h
+        LinkList/SLinkList.cpp
+        LinkList/SLinkList.h)

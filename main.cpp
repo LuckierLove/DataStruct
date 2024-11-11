@@ -1,33 +1,19 @@
-#include "SequenceList/SequenceListDynamic.h"
+#include "LinkList/SLinkList.h"
 #include <cstdio>
 int main() {
-    SqList L;
-
-    InitSqDList(L);
-
-    SqDListInsert(L, 1, 1);
-    SqDListInsert(L, 1, 2);
-    SqDListInsert(L, 1, 3);
-
-    PrintSqDList(L);
-    printf("\n");
-
-    int e;
-    SqDListDelete(L, 1, e);
-    PrintSqDList(L);
-    printf("删除的元素为:%d\n", e);
-
-    PrintSqDList(L);
-
-    printf("列表长度为: %d\n", SqDListLength(L));
-    printf("列表是否为空: %s\n", SqDListEmpty(L) ? "true" : "false");
-
-    SqDListInsert(L, 1, 1);
-    SqDListInsert(L, 1, 2);
-    SqDListInsert(L, 1, 3);
-
-    PrintSqDList(L);
-
-    printf("元素3所在位序为: %d", LocateSqDListElem(L,3));
-    printf("位序为3的元素为: %d", GetSqDListElem(L, 3));
+    LinkList L;
+    InitSLinkList(L);
+    printf("当前表长: %d\n", SLinkListLength(L));
+    printf("当前是否为空表: %s\n", SLinkListEmpty(L) ? "true" : "false");
+    SLinkList_TailInsert(L);
+    SLinkListInsert(L, 2, 1);
+    PrintSLinkList(L);
+    printf("当前表长: %d\n", SLinkListLength(L));
+    printf("当前是否为空表: %s\n", SLinkListEmpty(L) ? "true" : "false");
+    ElemType e;
+    SLinkListDelete(L, 2, e);
+    printf("删除的元素为: %d\n", e);
+    printf("当前表长: %d\n", SLinkListLength(L));
+    printf("当前是否为空表: %s\n", SLinkListEmpty(L) ? "true" : "false");
+    PrintSLinkList(L);
 }
