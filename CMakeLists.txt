@@ -25,4 +25,8 @@ add_executable(DataStruct main.cpp
         LinkList/DLoopLinkList.cpp
         LinkList/DLoopLinkList.h
         LinkList/StaticLinkList.cpp
-        LinkList/StaticLinkList.h)
+        LinkList/StaticLinkList.h
+        Stack/SqStack.cpp
+        Stack/SqStack.h
+        Stack/LinkStack.cpp
+        Stack/LinkStack.h)

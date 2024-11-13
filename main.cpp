@@ -1,35 +1,24 @@
-#include "LinkList/StaticLinkList.h"
 #include <cstdio>
 
+#include "Stack/LinkStack.h"
+
 int main() {
-    LinkList L;
-    InitStaticLinkList(L);
-    printf("当前表长: %d\n", StaticLinkListLength(L));
-    printf("是否为空: %s\n", StaticLinkListEmpty(L) ? "true" : "false");
-    StaticLinkListInsert(L, 1, 1);
-    StaticLinkListInsert(L, 1, 2);
-    StaticLinkListInsert(L, 1, 3);
+    LinkStack S;
+    InitLinkStack(S);
 
-    printf("\n");
+    PushLinkStack(S, 0);
+    PushLinkStack(S, 4);
+    PushLinkStack(S, 5);
+    PushLinkStack(S, 5);
+    PushLinkStack(S, 1);
 
-    PrintStaticLinkList(L);
-    printf("当前表长: %d\n", StaticLinkListLength(L));
-    printf("是否为空: %s\n", StaticLinkListEmpty(L) ? "true" : "false");
-
-    printf("\n");
+    PrintLinkStack(S);
 
     ElemType e;
-    StaticLinkListDelete(L, 3, e);
-    printf("删除的元素为: %d\n", e);
-    PrintStaticLinkList(L);
+    PopLinkStack(S, e);
+    printf("出栈元素: %d\n", e);
 
-    printf("\n");
+    PrintLinkStack(S);
 
-    printf("位序为1的元素为: %d\n", L[GetStaticLinkListElem(L, 1)].data);
-
-    printf("\n");
-
-    StaticLinkListDelete(L, 1, e);
-    printf("删除的元素为: %d\n", e);
-    PrintStaticLinkList(L);
+    DestroyLinkStack(S);
 }
