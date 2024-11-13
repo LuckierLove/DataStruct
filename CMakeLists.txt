@@ -15,4 +15,14 @@ add_executable(DataStruct main.cpp
         LinkList/SLoopLinkListH.h
         LinkList/SLoopLinkListH.cpp
         LinkList/SLoopLinkList.cpp
-        LinkList/SLoopLinkList.h)
+        LinkList/SLoopLinkList.h
+        LinkList/DLinkListH.cpp
+        LinkList/DLinkListH.h
+        LinkList/DLinkList.cpp
+        LinkList/DLinkList.h
+        LinkList/DLoopLinkListH.cpp
+        LinkList/DLoopLinkListH.h
+        LinkList/DLoopLinkList.cpp
+        LinkList/DLoopLinkList.h
+        LinkList/StaticLinkList.cpp
+        LinkList/StaticLinkList.h)

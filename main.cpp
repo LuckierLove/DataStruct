@@ -1,35 +1,35 @@
-#include "LinkList/SLoopLinkList.h"
+#include "LinkList/StaticLinkList.h"
 #include <cstdio>
 
 int main() {
     LinkList L;
-    InitSLoopLinkList(L);
-    printf("当前表长: %d\n", SLoopLinkListLength(L));
-    printf("是否为空: %s\n", SLoopLinkListEmpty(L) ? "true" : "false");
-    SLoopLinkListInsert(L, 1, 1);
-    SLoopLinkListInsert(L, 1, 2);
-    SLoopLinkListInsert(L, 1, 3);
+    InitStaticLinkList(L);
+    printf("当前表长: %d\n", StaticLinkListLength(L));
+    printf("是否为空: %s\n", StaticLinkListEmpty(L) ? "true" : "false");
+    StaticLinkListInsert(L, 1, 1);
+    StaticLinkListInsert(L, 1, 2);
+    StaticLinkListInsert(L, 1, 3);
 
     printf("\n");
 
-    PrintSLoopLinkList(L);
-    printf("当前表长: %d\n", SLoopLinkListLength(L));
-    printf("是否为空: %s\n", SLoopLinkListEmpty(L) ? "true" : "false");
+    PrintStaticLinkList(L);
+    printf("当前表长: %d\n", StaticLinkListLength(L));
+    printf("是否为空: %s\n", StaticLinkListEmpty(L) ? "true" : "false");
 
     printf("\n");
 
     ElemType e;
-    SLoopLinkListDelete(L, 3, e);
+    StaticLinkListDelete(L, 3, e);
     printf("删除的元素为: %d\n", e);
-    PrintSLoopLinkList(L);
+    PrintStaticLinkList(L);
 
     printf("\n");
 
-    printf("位序为1的元素为: %d\n", GetSLoopLinkListElem(L, 1)->data);
+    printf("位序为1的元素为: %d\n", L[GetStaticLinkListElem(L, 1)].data);
 
     printf("\n");
 
-    SLoopLinkListDelete(L, 1, e);
+    StaticLinkListDelete(L, 1, e);
     printf("删除的元素为: %d\n", e);
-    PrintSLoopLinkList(L);
+    PrintStaticLinkList(L);
 }
