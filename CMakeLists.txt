@@ -29,4 +29,8 @@ add_executable(DataStruct main.cpp
         Stack/SqStack.cpp
         Stack/SqStack.h
         Stack/LinkStack.cpp
-        Stack/LinkStack.h)
+        Stack/LinkStack.h
+        Queue/SqQueue.cpp
+        Queue/SqQueue.h
+        Queue/LoopQueue1.cpp
+        Queue/LoopQueue1.h)

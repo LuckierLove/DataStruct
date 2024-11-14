@@ -1,24 +1,43 @@
 #include <cstdio>
 
-#include "Stack/LinkStack.h"
+#include "Queue/LoopQueue1.h"
 
 int main() {
-    LinkStack S;
-    InitLinkStack(S);
+    Queue S;
 
-    PushLinkStack(S, 0);
-    PushLinkStack(S, 4);
-    PushLinkStack(S, 5);
-    PushLinkStack(S, 5);
-    PushLinkStack(S, 1);
+    InitLoopQueue1(S);
 
-    PrintLinkStack(S);
+    printf("是否为空: %s\n", LoopQueue1Empty(S) ? "true": "false");
+
+    EnLoopQueue1(S, 1);
+    EnLoopQueue1(S, 2);
+    EnLoopQueue1(S, 5);
+    EnLoopQueue1(S, 3);
+    EnLoopQueue1(S, 4);
+    EnLoopQueue1(S, 6);
+    EnLoopQueue1(S, 8);
+    EnLoopQueue1(S, 7);
+
+    PrintLoopQueue1(S);
+
+    printf("是否为空: %s\n", LoopQueue1Empty(S) ? "true": "false");
 
     ElemType e;
-    PopLinkStack(S, e);
-    printf("出栈元素: %d\n", e);
+    DeLoopQueue1(S, e);
+    printf("出队元素: %d\n", e);
 
-    PrintLinkStack(S);
+    PrintLoopQueue1(S);
 
-    DestroyLinkStack(S);
+    GetLoopQueue1Top(S, e);
+    printf("头元素为: %d\n", e);
+
+    PrintLoopQueue1(S);
+
+
+    while(!LoopQueue1Empty(S)) {
+        DeLoopQueue1(S, e);
+    }
+
+    printf("是否为空: %s\n", LoopQueue1Empty(S) ? "true": "false");
+
 }
