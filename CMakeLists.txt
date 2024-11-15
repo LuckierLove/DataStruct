@@ -33,4 +33,10 @@ add_executable(DataStruct main.cpp
         Queue/SqQueue.cpp
         Queue/SqQueue.h
         Queue/LoopQueue1.cpp
-        Queue/LoopQueue1.h)
+        Queue/LoopQueue1.h
+        Queue/LoopQueue2.cpp
+        Queue/LoopQueue2.h
+        Queue/LoopQueue3.cpp
+        Queue/LoopQueue3.h
+        StackApplication/ReversePolishNotation.cpp
+        StackApplication/ReversePolishNotation.h)

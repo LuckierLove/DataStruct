@@ -45,8 +45,8 @@ bool GetLoopQueue1Top(Queue S, int &e) {
 void PrintLoopQueue1(Queue S) {
     int i = S.front;
     printf("从头到尾打印队列\n");
-    while((i + 1) % MaxSize != S.rear) {
-        printf("[%d]\n", S.data[i]);
+    while((i + 1) % MaxSize != (S.rear + 1) % MaxSize) {
+        printf("[%d] - [%d]\n", i, S.data[i]);
         i++;
     }
 }
