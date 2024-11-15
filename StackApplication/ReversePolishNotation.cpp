@@ -50,7 +50,7 @@ void ReversePolishNotation::Middle2Reverse() {
                 break;
         }
 
-        if(48<= n && n <= 57) {
+        if((48<= n && n <= 57) || (97 <= n && n <= 122) || (65 <= n && n <= 90)) {
             printf("%c", n);
         }
 
