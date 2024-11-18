@@ -39,4 +39,6 @@ add_executable(DataStruct main.cpp
         Queue/LoopQueue3.cpp
         Queue/LoopQueue3.h
         StackApplication/ReversePolishNotation.cpp
-        StackApplication/ReversePolishNotation.h)
+        StackApplication/ReversePolishNotation.h
+        String/SString.h
+        String/SString.cpp)
